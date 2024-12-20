@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+body{
+    background-color: #000;
+    color: #fff;
+    font-family: "Mooli", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body::-webkit-scrollbar{
+    width: 1rem;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: blue;
+    border-radius: 5rem;
+}
+body::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+
+.main{
+    background: linear-gradient(to right , rgba(60,0,0,.7), rgba(0,0,120,0.3));
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+
+.main-heading {
+    font-family: "Kaushan Script", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.main h3{
+    font-size: 3rem;
+    margin-top: 30px;
+    text-shadow: .5rem 1rem rgba(0,0,0,0.2);
+}
+
+.tasks{
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.tasks a{
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.task{
+    position: relative;
+}
+
+.task-num{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    top: 15px;
+    left: 15px;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.task img {
+    width: 200px;
+    height: 180px;
+    object-fit: center;
+    border-radius: 1.4rem;
+    opacity: .4;
+    transition: opacity .8s;
+    transform: translateY(10%);
+}
+
+.task:hover img{
+    opacity: 1;
+}
+
+.task a .details {
+    width: 300px;
+    background-color: rgba(0,0,120,0.3);
+    padding: 6px 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.n-btn{
+    padding-bottom: 20px !important;
+}
+
+.task a .details h3{
+    font-size: 2.2rem;
+}
+
+.task a .details p {
+    width: 10rem;
+    color: aliceblue;
+    margin: 0 auto;
+}
+
+
+
+.task a .details button {
+    margin: 10px 0;
+    padding: 10px 20px;
+    border-radius: .5rem;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: blue;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.task a .details button::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right , transparent , #fff , transparent);
+    transform: skew(-30deg);
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transition: left .3s;
+}
+
+.task a .details button:hover::after{
+    left: 100%;
+}
+
