@@ -1,0 +1,197 @@
+/* Default Style  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+body{
+    background-color: #000;
+    color: #fff;
+    font-family: "Mooli", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+/* End of default styles  */
+
+
+/* Icon for going back  */
+.back {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+}
+
+.back span {
+    font-family: "Kaushan Script" , cursive;
+    color: blue;
+    margin-left: .4rem;
+}
+.back i {
+    font-size: 1rem;
+    color: #fff;
+}
+ /* End  */
+
+
+.main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    background: linear-gradient(to right , rgba(40,0,0,0.6), rgba(0,0,20,0.3) , rgba(0,0,80,0.3));
+}
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Left Side  */
+.left-details {
+    width: 50%;
+    text-align: left;
+}
+.left-details h1{
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 3rem;
+}
+.left-details h3 {
+    width: 60%;
+    margin: 1rem auto;
+    letter-spacing: .09rem;
+}
+
+.left-details h3 span {
+    color: blue;
+}
+/* Left Side ends here  */
+
+
+/* Right Side  */
+.right {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main .right .heading {
+    font-size: 5rem;
+    text-shadow: .5rem 1rem rgba(0,0,0,0.3);
+}
+.main .right .heading span {
+    font-family: "Kaushan Script" , cursive;
+    color: blue;
+}
+.main .right .game {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.main .right .game button {
+    background-color: transparent;
+    border: none;
+    outline: none;   
+    color: #fff;
+    font-size: 1.4rem;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.main .right .game button span{
+    cursor: pointer;
+}
+.main .right .game button i{
+    font-size: .9rem;
+}
+.main .right .game button span:active{
+    transform: scale(.9);
+}
+.right .result{
+    margin-top: 3rem;
+}
+.right .result span{
+    font-size: 1rem;
+}
+/* Right side ends here  */
+
+
+/* Border  */
+.section-border {
+    width: .2rem;
+    height: 60vh;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.section-border::before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: blue;
+    position: absolute;
+    top: 0;
+    left: -.8rem;
+}
+.section-border::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: blue;
+    position: absolute;
+    bottom: 0;
+    left: -.8rem;
+}
+/* Border Ends here  */
+
+
+
+
+/* ResponsiveNess  */
+@media (max-width:700px) {
+    .container{
+        flex-direction: column;
+    }
+    .container .left-details{
+        width: 100%;
+        margin-top: 4rem;
+    }
+    .left-details h3 {
+        width: 80%;
+    }
+    .main .heading{
+        font-size: 3rem;
+        margin-bottom: 3rem;
+    }
+    .section-border {
+        display: none;
+    }
+    .right {
+        width: 100%;
+        padding-bottom: 40px;
+        text-align: center;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+/* End of ResponsiveNess  */

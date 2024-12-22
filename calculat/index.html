@@ -12,14 +12,27 @@
       href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Mooli&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
   </head>
   <body>
     <div class="main">
-        <h1  class="main-heading" >Calculator</h1>
-      <div class="calculator">
-        <input type="text" class="screen" readonly placeholder="0" />
+      <div class="back">
+        <a href="/index.html">
+          <i class="fa-solid fa-arrow-left-long"></i> <span>Go Back</span>
+        </a>
+      </div>
 
-        <div class="btn">
+      <h1 class="main-heading">Calculator</h1>
+      <div class="calculator">
+        <div class="input-wrapper">
+          <input type="text" class="screen" readonly placeholder="0" />
+          <span class="cros">x</span>
+        </div>
+
+        <div class="btns">
           <button>1</button>
           <button>2</button>
           <button>3</button>

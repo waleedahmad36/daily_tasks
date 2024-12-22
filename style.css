@@ -4,6 +4,7 @@
     box-sizing: border-box;
     border: none;
     outline: none;
+    text-decoration: none;
 }
 body{
     background-color: #000;
@@ -14,19 +15,218 @@ body{
 }
 
 body::-webkit-scrollbar{
-    width: 1rem;
+    width: .6rem;
 }
 body::-webkit-scrollbar-thumb{
     background-color: blue;
     border-radius: 5rem;
 }
 body::-webkit-scrollbar-track{
-    background-color: transparent;
+    background: linear-gradient(to right , rgba(40,0,0,.7), rgba(0,0,120,0.3));
+}
+
+/* End of Default Styles  */
+
+.container {
+    background: linear-gradient(to right , rgba(40,0,0,.7), rgba(0,0,120,0.3));
 }
 
 
+/* Navbar  */
+.navbar{
+    padding: 0 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 12vh;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3));
+}
+.navbar .logo {
+    position: relative;
+    z-index: 99;
+}
+.navbar .logo span {
+    font-family: "Kaushan Script" , cursive;
+    color: blue;
+    font-size: 1.8rem;
+    z-index: 9999;
+}
+.navbar .menu-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    cursor: pointer;
+    position: relative;
+    z-index: 99;
+}
+.navbar .menu-icon .line-1,.line-3 {
+    background-color: blue;
+    width: 30px;
+    height: .1rem;
+    transition: all .5s;
+}
+.navbar .menu-icon .line-2 {
+    background-color: blue;
+    width: 20px;
+    height: .1rem;
+    transition: all .5s;
+}
+.navbar .menu-icon:hover .line-1{
+    width: 25px;
+    transform-origin: right;
+    transform: translateX(-10px);
+}
+.navbar .menu-icon:hover .line-3{
+    width: 25px;
+    transform-origin: right;
+    transform: translateX(-10px);
+}
+.navbar .menu-icon:hover .line-2{
+    transform: translateX(2px);
+}
+.navigate .line-1{
+    transform: rotateZ(35deg) translateX(5px);;
+    width: 20px !important;
+}
+.navigate .line-3{
+    transform: rotateZ(-35deg) translateX(5px);;
+    width: 20px !important;
+}
+.navigate .line-2 {
+    width: 30px !important;
+    transform: translateX(-10px);
+}
+/* Navbar Ends Here  */
+
+
+/* Navigation  */
+.navigation{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s;
+    transform: translateX(-100%);
+}
+.navigate .navigation {
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+    transform: translateX(0);
+}
+
+/* Navigation Left Side  */
+.navigation-left{
+    width: 50%;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition:  all .5s;
+    overflow: hidden;
+}
+.navigate .navigation-left {
+    height: 100%;
+    opacity: 1;
+    visibility: visible;
+    transition:  all 1s 1s;
+}
+.navigation-left img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100);
+    cursor: pointer;
+    opacity: .6;
+    transition: all .5s;
+}
+.navigation-left img:hover {
+    opacity: 1;
+    filter: grayscale(0);
+    transform: scale(1.01);
+}
+.navigate .navigation-left img{
+    opacity:0.4
+}
+/* Navigation Left Ends Here  */
+
+
+/* Navigation Right  */
+.navigation .menu-items-sm {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.navigation .menu-items-sm a{
+    color: #fff;
+    display: flex;
+    gap: 1.8rem;
+    align-items: center;
+    letter-spacing: .1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s;
+    position: relative;
+}
+.navigate .navigation .menu-items-sm a:nth-child(1) {
+    opacity: 1;
+    visibility: visible;
+    transition: all 1s 1.2s;
+}
+.navigate .navigation .menu-items-sm a:nth-child(2) {
+    opacity: 1;
+    visibility: visible;
+    transition: all 1s 1.4s;
+}
+.navigate .navigation .menu-items-sm a:nth-child(3) {
+    opacity: 1;
+    visibility: visible;
+    transition: all 1s 1.6s;
+}
+.navigate .navigation .menu-items-sm a:nth-child(4) {
+    opacity: 1;
+    visibility: visible;
+    transition: all 1s 1.8s;
+}
+.navigation .menu-items-sm a::after{
+    content: '';
+    width: 0;
+    height: .2rem;
+    background-color: blue;
+    position: absolute;
+    bottom: -.5rem;
+    border-radius: 2rem;
+    transition: width .4s;
+}
+.navigation .menu-items-sm a:hover::after{
+    width: 100%;
+}
+.menu-items-sm a i{
+    font-size: 1.4rem;
+}
+/* Navigation Right Ends Here  */
+/* Navigation Ends Here  */
+
+
 .main{
-    background: linear-gradient(to right , rgba(60,0,0,.7), rgba(0,0,120,0.3));
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -34,7 +234,6 @@ body::-webkit-scrollbar-track{
     align-items: center;
     gap: 60px;
 }
-
 .main-heading {
     font-family: "Kaushan Script", serif;
     font-weight: 400;
@@ -46,6 +245,7 @@ body::-webkit-scrollbar-track{
     text-shadow: .5rem 1rem rgba(0,0,0,0.2);
 }
 
+/* Tasks Wrapper  */
 .tasks{
     width: 100%;
     max-width: 1200px;
@@ -57,7 +257,11 @@ body::-webkit-scrollbar-track{
     flex-wrap: wrap;
 }
 
-.tasks a{
+/* individual tasks styles either it is in link tag or without link tag  */
+.task{
+    position: relative;
+}
+.tasks a,.tsk{
     cursor: pointer;
     text-decoration: none;
     color: #fff;
@@ -65,11 +269,6 @@ body::-webkit-scrollbar-track{
     flex-direction: column;
     align-items: center;
 }
-
-.task{
-    position: relative;
-}
-
 .task-num{
     position: absolute;
     width: 50px;
@@ -85,7 +284,6 @@ body::-webkit-scrollbar-track{
     font-size: 1.5rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
 .task img {
     width: 200px;
     height: 180px;
@@ -95,12 +293,10 @@ body::-webkit-scrollbar-track{
     transition: opacity .8s;
     transform: translateY(10%);
 }
-
 .task:hover img{
     opacity: 1;
 }
-
-.task a .details {
+.task  .details {
     width: 300px;
     background-color: rgba(0,0,120,0.3);
     padding: 6px 15px;
@@ -108,23 +304,19 @@ body::-webkit-scrollbar-track{
     text-align: center;
 }
 
+/* task which don't have link button n-btn means no button  */
 .n-btn{
     padding-bottom: 20px !important;
 }
-
-.task a .details h3{
+.task  .details h3{
     font-size: 2.2rem;
 }
-
-.task a .details p {
+.task  .details p {
     width: 10rem;
     color: aliceblue;
     margin: 0 auto;
 }
-
-
-
-.task a .details button {
+.task .details button {
     margin: 10px 0;
     padding: 10px 20px;
     border-radius: .5rem;
@@ -136,7 +328,8 @@ body::-webkit-scrollbar-track{
     overflow: hidden;
 }
 
-.task a .details button::after{
+/* hover effect for buttons  */
+.task  .details button::after{
     content: '';
     width: 100%;
     height: 100%;
@@ -147,8 +340,35 @@ body::-webkit-scrollbar-track{
     left: -100%;
     transition: left .3s;
 }
-
-.task a .details button:hover::after{
+.task  .details button:hover::after{
     left: 100%;
 }
+/* hover effect ends here  */
 
+footer{
+    display: flex;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+footer p span {
+    font-family: "Kaushan Script" , cursive;
+}
+
+/* ResponsiveNess  */
+@media (max-width:500px) {
+    .navigate .navigation{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .navigate .navigation .navigation-left {
+        display: none;
+    }
+    .navigate .navigation .menu-items-lg {
+        width: 100%;
+    }
+}
+/* ResponsiveNess Ends Here  */

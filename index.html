@@ -1,70 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dailys Tasks</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Mooli&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Mooli&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Navbar  -->
+      <nav class="navbar">
+        <h3 class="logo">web<span>Dev</span></h3>
 
-</head>
-<body>
-    <div class="main">
-        <h3  class="main-heading" >Daily Tasks</h3>
-
-
-        <div class="tasks">
-
-            <div class="task">
-                <a href="https://github.com/waleedahmad36/daily_tasks">
-                    <img src="images/git.avif" alt="">
-
-                    <div class="details">
-                        <h3>Github</h3>
-                        <p>Repo is created , for this and upcomming taks</p>
-
-                        <button>open</button>
-                    </div>
-                </a>
-
-                <div class="task-num">01</div>
-
-            </div>
-            <div class="task ">
-                <a href="">
-                    <img src="images/theme.avif" alt="">
-
-                    <div class="details n-btn">
-                        <h3>Theming</h3>
-                        <p>All projects , will be displayed here , well structured</p>
-                    </div>
-                </a>
-
-                <div class="task-num">02</div>
-
-            </div>
-            <div class="task">
-                <a href="calculat/index.html">
-                    <img src="images/cal.webp" alt="">
-
-                    <div class="details">
-                        <h3>Calculator</h3>
-                        <p>Build in html , css and javaScript , click to see prieview</p>
-
-                        <button>open</button>
-                    </div>
-                </a>
-
-                <div class="task-num">03</div>
-
-            </div>
-
+        <div class="menu-icon">
+          <div class="line line-1"></div>
+          <div class="line line-2"></div>
+          <div class="line line-3"></div>
         </div>
 
+        <div class="navigation">
+          <div class="navigation-left">
+            <img src="images/navbg.avif" alt="" />
+          </div>
+          <div class="menu-items-sm">
+            <a href="https://www.linkedin.com/in/waleedahmad09/"
+              ><i class="fa-brands fa-linkedin"></i
+              ><span>waleedahmad09</span></a
+            >
+            <a href="https://github.com/waleedahmad36"
+              ><i class="fa-brands fa-github"></i><span>waleedahmad36</span></a
+            >
+            <a
+              href="https://www.facebook.com/profile.php?id=100089944027822&mibextid=ZbWKwL"
+              ><i class="fa-brands fa-facebook"></i><span>waleed ahmad</span></a
+            >
+            <a href=""
+              ><i class="fa-brands fa-whatsapp"></i
+              ><span>+92 3136392359</span></a
+            >
+          </div>
+        </div>
+      </nav>
+      <!-- Navbar Ends Here  -->
 
+      <div class="main">
+        <h3 class="main-heading">Daily Tasks</h3>
+
+        <!-- Tasks Wrapper  -->
+        <div class="tasks">
+          <div class="task">
+            <a href="https://github.com/waleedahmad36/daily_tasks">
+              <img src="images/git.avif" alt="" />
+
+              <div class="details">
+                <h3>Github</h3>
+                <p>Repo is created , for this and upcomming taks</p>
+                <button>open</button>
+              </div>
+            </a>
+            <div class="task-num">01</div>
+          </div>
+
+          <div class="task">
+            <div class="tsk">
+              <img src="images/theme.avif" alt="" />
+
+              <div class="details n-btn">
+                <h3>Theming</h3>
+                <p>All projects , will be displayed here , well structured</p>
+              </div>
+            </div>
+            <div class="task-num">02</div>
+          </div>
+
+          <div class="task">
+            <a href="calculat/index.html">
+              <img src="images/cal.webp" alt="" />
+
+              <div class="details">
+                <h3>Calculator</h3>
+                <p>
+                  Build in html , css and javaScript , click to see prieview
+                </p>
+                <button>open</button>
+              </div>
+            </a>
+            <div class="task-num">03</div>
+          </div>
+
+          <div class="task">
+            <div class="tsk">
+              <img src="images/navbar.avif" alt="" />
+              <div class="details">
+                <h3>Navbar</h3>
+                <p>This navigation bar is fully responsive on all screens</p>
+                <button class="nav-btn">open</button>
+              </div>
+            </div>
+            <div class="task-num">04</div>
+          </div>
+
+          <div class="task">
+            <a href="cricGame/index.html">
+              <img src="images/ceicket.avif" alt="" />
+              <div class="details">
+                <h3>Cric Game</h3>
+                <p>
+                  this game is built for logic building, Let's have a try click
+                  to play
+                </p>
+                <button>open</button>
+              </div>
+            </a>
+            <div class="task-num">05</div>
+          </div>
+        </div>
+        <!-- Tasks Wrapper Ends Here  -->
+      </div>
+      <!-- Main Ends Here  -->
     </div>
-</body>
+    <footer>
+      <p>&copy;All rights reserved, Author <span>Waleed Ahmad</span></p>
+    </footer>
+    <!-- Container Ends Here  -->
+    <script src="main.js"></script>
+  </body>
 </html>
